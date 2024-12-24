@@ -1,84 +1,117 @@
-import { useState } from 'react';
+import { useState } from "react";
+import ImageViewer from "./ImageViewer";
 
 function Projects() {
   const projects = [
     {
       id: 1,
       title: "Portfolio Website",
-      description: "A modern portfolio website built with React and Tailwind CSS, featuring smooth animations and responsive design.",
+      description:
+        "A modern portfolio website built with React and Tailwind CSS, featuring smooth animations and responsive design.",
       images: [
         "/data/portfolio-1.jpg",
         "/data/portfolio-2.jpg",
-        "/data/portfolio-3.jpg"
+        "/data/portfolio-3.jpg",
       ],
       technologies: ["React", "Tailwind CSS", "Framer Motion"],
       status: "completed",
       githubLink: "https://github.com/ussman007/portfolio",
-      demoVideo: "/data/portfolio-demo.mp4" // Optional demo video
+      demoVideo: "/data/portfolio-demo.mp4",
     },
     {
       id: 2,
-      title: "E-commerce Dashboard",
-      description: "An administrative dashboard for managing products, orders, and customers with analytics.",
+      title: "Ware-House Managment App",
+      description:
+        "Streamline Your Inventory with Our Warehouse Management App – Efficient tracking, real-time updates, and seamless control for all your storage needs",
       images: [
-        "/data/ecommerce-1.jpg",
-        "/data/ecommerce-2.jpg"
+        "/data/project1-ii.png",
+        "/data/proejct1-i .png",
+        "/data/proejct1- iii.png",
       ],
-      technologies: ["Next.js", "TypeScript", "MongoDB"],
-      status: "in-progress",
-      githubLink: "https://github.com/ussman007/ecommerce-dashboard"
+      technologies: ["React-Native", "Firebase-auth", "Firebase-database"],
+      status: "completed",
     },
     {
       id: 3,
       title: "Chat Application",
-      description: "Real-time chat application with features like group chat and file sharing.",
-      images: [
-        "/data/chat-1.jpg",
-        "/data/chat-2.jpg",
-        "/data/chat-2.jpg"
-      ],
+      description:
+        "Real-time chat application with features like group chat and file sharing.",
+      images: ["/data/chat-1.jpg", "/data/chat-2.jpg", "/data/chat-2.jpg"],
       technologies: ["React", "Socket.io", "Express"],
       status: "in-development",
-      githubLink: "https://github.com/ussman007/chat-app"
+      githubLink: "https://github.com/ussman007/chat-app",
     },
     {
       id: 4,
-      title: "Chat Application",
-      description: "Real-time chat application with features like group chat and file sharing.",
-      images: [
-        "/data/chat-1.jpg",
-        "/data/chat-2.jpg"
-      ],
+      title: "Fashion Cave Ecommerce Application",
+      description:
+        "Real-time chat application with features like group chat and file sharing.",
+      images: ["/data/chat-1.jpg", "/data/chat-2.jpg"],
       technologies: ["React", "Socket.io", "Express"],
       status: "in-development",
-      githubLink: "https://github.com/ussman007/chat-app"
-    }
+      githubLink: "https://github.com/ussman007/chat-app",
+    },
   ];
 
   // State to track current image for each project
   const [currentImageIndex, setCurrentImageIndex] = useState({});
 
+  // Add new state for image viewer
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [viewerImageIndex, setViewerImageIndex] = useState(0);
+
   const nextImage = (projectId) => {
-    setCurrentImageIndex(prev => ({
+    setCurrentImageIndex((prev) => ({
       ...prev,
-      [projectId]: ((prev[projectId] || 0) + 1) % projects.find(p => p.id === projectId).images.length
+      [projectId]:
+        ((prev[projectId] || 0) + 1) %
+        projects.find((p) => p.id === projectId).images.length,
     }));
   };
 
   const prevImage = (projectId) => {
-    setCurrentImageIndex(prev => ({
+    setCurrentImageIndex((prev) => ({
       ...prev,
-      [projectId]: ((prev[projectId] || 0) - 1 + projects.find(p => p.id === projectId).images.length) % projects.find(p => p.id === projectId).images.length
+      [projectId]:
+        ((prev[projectId] || 0) -
+          1 +
+          projects.find((p) => p.id === projectId).images.length) %
+        projects.find((p) => p.id === projectId).images.length,
     }));
+  };
+
+  // Handler for opening the image viewer
+  const openImageViewer = (projectId, imageIndex) => {
+    setSelectedProject(projects.find((p) => p.id === projectId));
+    setViewerImageIndex(imageIndex);
+  };
+
+  // Handler for closing the image viewer
+  const closeImageViewer = () => {
+    setSelectedProject(null);
+    setViewerImageIndex(0);
+  };
+
+  // Handlers for navigation in the viewer
+  const nextViewerImage = () => {
+    setViewerImageIndex((prev) => (prev + 1) % selectedProject.images.length);
+  };
+
+  const prevViewerImage = () => {
+    setViewerImageIndex(
+      (prev) =>
+        (prev - 1 + selectedProject.images.length) %
+        selectedProject.images.length
+    );
   };
 
   const getStatusBadge = (status) => {
     const badges = {
-      'completed': 'bg-green-500/20 text-green-300',
-      'in-progress': 'bg-yellow-500/20 text-yellow-300',
-      'in-development': 'bg-blue-500/20 text-blue-300'
+      completed: "bg-green-500/20 text-green-300",
+      "in-progress": "bg-yellow-500/20 text-yellow-300",
+      "in-development": "bg-blue-500/20 text-blue-300",
     };
-    return badges[status] || 'bg-purple-500/20 text-purple-300';
+    return badges[status] || "bg-purple-500/20 text-purple-300";
   };
 
   return (
@@ -96,12 +129,19 @@ function Projects() {
           >
             {/* Image Carousel */}
             <div className="relative h-48 bg-purple-900/20 rounded-lg mb-4 overflow-hidden group">
-              <img 
+              <img
                 src={project.images[currentImageIndex[project.id] || 0]}
                 alt={`${project.title} preview`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover cursor-pointer"
+                onClick={() =>
+                  openImageViewer(
+                    project.id,
+                    currentImageIndex[project.id] || 0
+                  )
+                }
+                loading="lazy"
               />
-              
+
               {project.images.length > 1 && (
                 <>
                   <button
@@ -118,7 +158,7 @@ function Projects() {
                   >
                     →
                   </button>
-                  
+
                   {/* Image indicators */}
                   <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-2">
                     {project.images.map((_, index) => (
@@ -126,8 +166,8 @@ function Projects() {
                         key={index}
                         className={`w-2 h-2 rounded-full ${
                           index === (currentImageIndex[project.id] || 0)
-                            ? 'bg-purple-500'
-                            : 'bg-gray-500'
+                            ? "bg-purple-500"
+                            : "bg-gray-500"
                         }`}
                       />
                     ))}
@@ -136,19 +176,26 @@ function Projects() {
               )}
             </div>
 
-            <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
+            <h3 className="text-xl font-semibold text-white mb-2">
+              {project.title}
+            </h3>
             <p className="text-gray-400 mb-4">{project.description}</p>
-            
+
             {/* Status Badge */}
             <div className="mb-4">
-              <span className={`px-3 py-1 rounded-full text-sm ${getStatusBadge(project.status)}`}>
-                {project.status.replace('-', ' ').charAt(0).toUpperCase() + project.status.slice(1)}
+              <span
+                className={`px-3 py-1 rounded-full text-sm ${getStatusBadge(
+                  project.status
+                )}`}
+              >
+                {project.status.replace("-", " ").charAt(0).toUpperCase() +
+                  project.status.slice(1)}
               </span>
             </div>
 
             <div className="flex flex-wrap gap-2 mb-4">
               {project.technologies.map((tech) => (
-                <span 
+                <span
                   key={tech}
                   className="px-3 py-1 bg-purple-500/10 text-purple-300 rounded-full text-sm"
                 >
@@ -178,9 +225,19 @@ function Projects() {
           </div>
         ))}
       </div>
+
+      {/* Add the ImageViewer component */}
+      {selectedProject && (
+        <ImageViewer
+          images={selectedProject.images}
+          currentIndex={viewerImageIndex}
+          onClose={closeImageViewer}
+          onNext={nextViewerImage}
+          onPrev={prevViewerImage}
+        />
+      )}
     </section>
   );
 }
 
 export default Projects;
-

@@ -1,3 +1,6 @@
+import { HiArrowRight } from "react-icons/hi";
+import { Link } from "react-scroll";
+
 function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4">
@@ -8,16 +11,21 @@ function Hero() {
               Muhammad Usman
             </span>
           </h1>
-          <p className="mt-4 text-gray-400 text-lg md:text-xl">
-            Full Stack Developer
+          <p className="mt-4 text-gray-400 text-lg md:text-xl max-w-[60%] break-words">
+            Full Stack Developer | React, React-Native, Node.js, MERN Stack, &
+            <b className="text-purple-500"> Mobile App Specialist</b>
           </p>
-          <button
-            className="mt-8 px-6 py-3 bg-purple-600 text-white rounded-lg 
-              hover:bg-purple-500 transform hover:scale-105 transition-all duration-300
-              shadow-[0_0_15px_rgba(147,51,234,0.5)] hover:shadow-[0_0_30px_rgba(147,51,234,0.8)]"
-          >
-            View Projects
-          </button>
+
+          <div className="mt-8 ">
+            <Link
+              to="projects"
+              smooth={true}
+              duration={500}
+              className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-purple-600 border border-transparent rounded-md shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors duration-200 cursor-pointer"
+            >
+              View Projects <HiArrowRight className="ml-2" />
+            </Link>
+          </div>
         </div>
 
         <div className="relative group">

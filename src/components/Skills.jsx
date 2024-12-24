@@ -1,24 +1,24 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 function Skills() {
   const skills = [
     {
       category: "Frontend",
-      items: ["React", "Next.js", "TypeScript", "Tailwind CSS"]
+      items: ["React.js/React-Native", "Next.js", "TypeScript", "Tailwind CSS"],
     },
     {
       category: "Backend",
-      items: ["Node.js", "Express", "Python", "MongoDB"]
+      items: ["Node.js", "Express", "php/sql", "MongoDB"],
     },
     {
       category: "Tools",
-      items: ["Git", "Docker", "AWS", "Firebase"]
+      items: ["Git", "Docker", "AWS", "Firebase"],
     },
     {
       category: "Design",
-      items: ["Figma", "Adobe XD", "Photoshop", "UI/UX"]
-    }
+      items: ["Figma", "Adobe XD", "Photoshop", "UI/UX"],
+    },
   ];
 
   return (
@@ -38,7 +38,8 @@ function Skills() {
                   key={skill}
                   className="flex items-center justify-center group"
                 >
-                  <div className="w-full p-3 bg-purple-900/20 rounded-lg
+                  <div
+                    className="w-full p-3 bg-purple-900/20 rounded-lg
                     border border-purple-500/20 group-hover:border-purple-500/50 
                     transition-all duration-300 text-center
                     shadow-[0_0_15px_rgba(147,51,234,0.1)] 
@@ -59,4 +60,3 @@ function Skills() {
 }
 
 export default Skills;
-
