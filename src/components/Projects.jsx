@@ -5,58 +5,79 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Portfolio Website",
+      title: "LifeMib",
       description:
-        "A modern portfolio website built with React and Tailwind CSS, featuring smooth animations and responsive design.",
-      images: [
-        "/data/portfolio-1.jpg",
-        "/data/portfolio-2.jpg",
-        "/data/portfolio-3.jpg",
-      ],
+        "Insurance platform with meeting, chat, and secure payment features",
+      images: ["/data/p2.PNG"],
       technologies: ["React", "Tailwind CSS", "Framer Motion"],
       status: "completed",
-      githubLink: "https://github.com/ussman007/portfolio",
-      demoVideo: "/data/portfolio-demo.mp4",
+      liveLink: "https://lifemib.com/",
     },
     {
       id: 2,
-      title: "Ware-House Managment App",
+      title: "Mathani",
       description:
-        "Streamline Your Inventory with Our Warehouse Management App – Efficient tracking, real-time updates, and seamless control for all your storage needs",
-      images: [
-        "/data/project1-ii.png",
-        "/data/proejct1-i .png",
-        "/data/proejct1- iii.png",
-      ],
+        "Quranic app with translations and recitations in multiple languages",
+      images: ["/data/project1-ii.png", "/data/proejct1-i .png"],
       technologies: ["React-Native", "Firebase-auth", "Firebase-database"],
+      liveLink:
+        "https://play.google.com/store/apps/details?id=com.mathani&pli=1",
       status: "completed",
     },
     {
       id: 3,
-      title: "Chat Application",
-      description:
-        "Real-time chat application with features like group chat and file sharing.",
-      images: ["/data/chat-1.jpg", "/data/chat-2.jpg", "/data/chat-2.jpg"],
-      technologies: ["React", "Socket.io", "Express"],
-      status: "in-development",
-      githubLink: "https://github.com/ussman007/chat-app",
+      title: "Avenue at york",
+      description: "BOOking apartments web app",
+      images: ["/data/p3.PNG"],
+      technologies: [
+        "React-js",
+        "Tailwind CSS",
+        "Express",
+        "Node.js",
+        "Mongo DB",
+      ],
+      status: "completed",
+      liveLink: "https://avenueatyork.com/",
     },
     {
       id: 4,
-      title: "Fashion Cave Ecommerce Application",
+      title: "Simfree",
       description:
-        "Real-time chat application with features like group chat and file sharing.",
-      images: ["/data/chat-1.jpg", "/data/chat-2.jpg"],
-      technologies: ["React", "Socket.io", "Express"],
-      status: "in-development",
-      githubLink: "https://github.com/ussman007/chat-app",
+        "Data provider app with Stripe and crypto payments for global travelers,ios and android app also.",
+      images: ["/data/p4.PNG", "/data/p4-i.PNG"],
+      technologies: [
+        "React-js",
+        "React-native",
+        "Tailwind CSS",
+        "Express",
+        "Stripe",
+        "crypto payments",
+        "Node.js",
+        "Mongo DB",
+      ],
+      status: "completed",
+      liveLink: "https://dev.simfree.io/",
+    },
+    {
+      id: 5,
+      title: "HyLy",
+      description:
+        "AI-powered chatbot and admin panel for real estate, enhancing property management",
+      images: ["/data/p6.PNG"],
+      technologies: [
+        "React-js",
+        "Tailwind CSS",
+        "Cloud Services",
+        "Material UI",
+        "GraphQL",
+      ],
+      status: "completed",
+      liveLink: "https://hyly.ai/",
     },
   ];
 
-  // State to track current image for each project
   const [currentImageIndex, setCurrentImageIndex] = useState({});
 
-  // Add new state for image viewer
   const [selectedProject, setSelectedProject] = useState(null);
   const [viewerImageIndex, setViewerImageIndex] = useState(0);
 
@@ -80,19 +101,16 @@ function Projects() {
     }));
   };
 
-  // Handler for opening the image viewer
   const openImageViewer = (projectId, imageIndex) => {
     setSelectedProject(projects.find((p) => p.id === projectId));
     setViewerImageIndex(imageIndex);
   };
 
-  // Handler for closing the image viewer
   const closeImageViewer = () => {
     setSelectedProject(null);
     setViewerImageIndex(0);
   };
 
-  // Handlers for navigation in the viewer
   const nextViewerImage = () => {
     setViewerImageIndex((prev) => (prev + 1) % selectedProject.images.length);
   };
@@ -127,7 +145,6 @@ function Projects() {
               border border-purple-500/20 hover:border-purple-500/50
               shadow-[0_0_15px_rgba(147,51,234,0.1)] hover:shadow-[0_0_30px_rgba(147,51,234,0.2)]"
           >
-            {/* Image Carousel */}
             <div className="relative h-48 bg-purple-900/20 rounded-lg mb-4 overflow-hidden group">
               <img
                 src={project.images[currentImageIndex[project.id] || 0]}
@@ -205,20 +222,12 @@ function Projects() {
             </div>
 
             <div className="flex space-x-4">
-              <a
-                href={project.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-purple-400 hover:text-purple-300 transition-colors duration-300"
-              >
-                View Code →
-              </a>
-              {project.demoVideo && (
+              {project.liveLink && (
                 <button
                   onClick={() => window.open(project.demoVideo)}
                   className="text-purple-400 hover:text-purple-300 transition-colors duration-300"
                 >
-                  Watch Demo →
+                  Live link →
                 </button>
               )}
             </div>

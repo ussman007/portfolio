@@ -1,9 +1,9 @@
 function Contact() {
   const contactInfo = {
-    email: "usmaanwork1@gmail.com",
-    phone: "+92 308 4411894",
+    email: "bilalakram.1558@gmail.com",
+    phone: "+92 305 7401558",
     location: "Faisalabad, Pakistan",
-    availability: "Available for freelance work",
+    availability: "Available for part-time or freelance work",
   };
 
   return (
