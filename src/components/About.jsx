@@ -13,10 +13,14 @@ function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-gray-300 leading-relaxed">
-              Hi there! I'm Muhammad Usman, a passionate Full Stack Developer
-              with a keen interest in building modern web applications and
-              cross-platform mobile apps. I specialize in creating responsive
-              and user-friendly interfaces using cutting-edge technologies.
+              Hi there! I'm Muhammad Bilal, Senior Software Engineer with 3+
+              years of extensive experience in designing and developing
+              high-performance web and mobile applications. Specializes in
+              React, Node.js, and React Native, with a strong focus on scalable
+              architectures, cross-platform solutions, and AI-powered
+              applications. Demonstrates leadership by managing teams, training
+              developers, and leading technical innovations for startups and
+              large-scale projects.
             </p>
             <p className="text-gray-300 leading-relaxed">
               With a strong foundation in both frontend and backend development,
@@ -43,7 +47,7 @@ function About() {
                 </li>
                 <li className="flex items-center space-x-2">
                   <span className="text-purple-400">→</span>
-                  <span>Responsive Design</span>
+                  <span> AI Chatbots</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <span className="text-purple-400">→</span>
@@ -51,7 +55,15 @@ function About() {
                 </li>
                 <li className="flex items-center space-x-2">
                   <span className="text-purple-400">→</span>
-                  <span>Database Design</span>
+                  <span>Component Libraries</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="text-purple-400">→</span>
+                  <span>Payment Integrations</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="text-purple-400">→</span>
+                  <span>Real-Time Features</span>
                 </li>
               </ul>
             </div>
@@ -66,13 +78,13 @@ function About() {
                 <div>
                   <h4 className="text-gray-300 font-medium">Experience</h4>
                   <p className="text-gray-400">
-                    2+ years in Web & Mobile development
+                    3+ years as a Sofware Engineer
                   </p>
                 </div>
                 <div>
                   <h4 className="text-gray-300 font-medium">Education</h4>
                   <p className="text-gray-400">
-                    Doing Bachelor's in Computer Science
+                    Bachelor's in Computer Science
                   </p>
                 </div>
                 <div>

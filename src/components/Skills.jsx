@@ -5,15 +5,21 @@ function Skills() {
   const skills = [
     {
       category: "Frontend",
-      items: ["React.js/React-Native", "Next.js", "TypeScript", "Tailwind CSS"],
+      items: [
+        "React.js",
+        "React-Native",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+      ],
     },
     {
       category: "Backend",
-      items: ["Node.js", "Express", "php/sql", "MongoDB"],
+      items: ["Node.js", "Express", "GraphQL", "MongoDB"],
     },
     {
       category: "Tools",
-      items: ["Git", "Docker", "AWS", "Firebase"],
+      items: ["Git", "Docker", "AWS", "Firebase", " NX Monorepo", "Hubstaff"],
     },
     {
       category: "Design",
