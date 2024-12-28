@@ -205,14 +205,6 @@ function Projects() {
             </div>
 
             <div className="flex space-x-4">
-              <a
-                href={project.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-purple-400 hover:text-purple-300 transition-colors duration-300"
-              >
-                View Code →
-              </a>
               {project.demoVideo && (
                 <button
                   onClick={() => window.open(project.demoVideo)}
