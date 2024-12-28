@@ -8,11 +8,11 @@ function Hero() {
         <div className="text-center md:text-left">
           <h1 className="text-4xl md:text-6xl font-bold">
             <span className="bg-gradient-to-r from-purple-600 to-purple-300 bg-clip-text text-transparent animate-pulse">
-              Muhammad Bilal
+              Muhammad Usman
             </span>
           </h1>
           <p className="mt-4 text-gray-400 text-lg md:text-xl max-w-[60%] break-words">
-            Senior Software Engineer with 3+ years of extensive experience
+            Full stack Developer | Your vision my code!
           </p>
 
           <div className="mt-8 ">

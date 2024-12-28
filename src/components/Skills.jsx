@@ -15,14 +15,14 @@ function Skills() {
     },
     {
       category: "Backend",
-      items: ["Node.js", "Express", "GraphQL", "MongoDB"],
+      items: ["Node.js", "Express", "MongoDB"],
     },
     {
       category: "Tools",
-      items: ["Git", "Docker", "AWS", "Firebase", " NX Monorepo", "Hubstaff"],
+      items: ["Git", "Docker", "AWS", "Firebase"],
     },
     {
-      category: "Design",
+      category: "Your Design",
       items: ["Figma", "Adobe XD", "Photoshop", "UI/UX"],
     },
   ];

@@ -1,9 +1,9 @@
 function Footer() {
   const socialLinks = [
-    { name: "GitHub", url: "https://github.com/bilalansri" },
+    { name: "GitHub", url: "https://github.com/ussman007" },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/muhammad-bilal-5a0932230/",
+      url: "https://www.linkedin.com/in/m-usman-akram-473800299/",
     },
   ];
 

@@ -40,7 +40,7 @@ function Offers() {
       icon: <FaDatabase className="text-4xl text-purple-400" />,
       description:
         "Designing and implementing efficient database structures and queries.",
-      technologies: ["MongoDB", "GraphQL", "Firebase", "Realtime Database"],
+      technologies: ["MongoDB", "Firebase", "Realtime Database"],
     },
     {
       id: 5,
@@ -48,14 +48,7 @@ function Offers() {
       icon: <FaTools className="text-4xl text-purple-400" />,
       description:
         "Seamlessly integrating third-party APIs and services into applications.",
-      technologies: [
-        "REST APIs",
-        "API Testing",
-        "Stripe",
-        "Twilio",
-        "Ably",
-        "Cryptomus",
-      ],
+      technologies: ["REST APIs", "API Testing", "Stripe"],
     },
   ];
 
