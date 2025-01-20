@@ -5,18 +5,20 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Portfolio Website",
+      title: "Cks Grocery store Website",
       description:
-        "A modern portfolio website built with React and Tailwind CSS, featuring smooth animations and responsive design.",
-      images: [
-        "/data/portfolio-1.jpg",
-        "/data/portfolio-2.jpg",
-        "/data/portfolio-3.jpg",
+        "A modern Grocery store website built with Next.js and Tailwind CSS, featuring smooth animations and responsive design.",
+      images: ["/data/cks1.PNG", "/data/cks2.PNG"],
+      technologies: [
+        "Next.js",
+        "Firebase-Admin-Auth",
+        "Firebase Database",
+        "Tailwind CSS",
+        "Vercel",
       ],
-      technologies: ["React", "Tailwind CSS", "Framer Motion"],
-      status: "completed",
+      status: "in-development",
       githubLink: "https://github.com/ussman007/portfolio",
-      demoVideo: "/data/portfolio-demo.mp4",
+      demoVideo: "https://ckss.vercel.app/",
     },
     {
       id: 2,
@@ -33,24 +35,24 @@ function Projects() {
     },
     {
       id: 3,
-      title: "Chat Application",
+      title: "Voting App",
       description:
-        "Real-time chat application with features like group chat and file sharing.",
-      images: ["/data/chat-1.jpg", "/data/chat-2.jpg", "/data/chat-2.jpg"],
-      technologies: ["React", "Socket.io", "Express"],
-      status: "in-development",
+        "A secure voting app that verifies CNIC, allows party selection, and enables fingerprint-based voting. After casting a vote, users see real-time voting stats in a modal.",
+      images: ["/data/v2.png", "/data/v1.png"],
+      technologies: ["React-Native", "Firebase", "Finger-Print Library"],
+      status: "completed",
       githubLink: "https://github.com/ussman007/chat-app",
     },
-    {
-      id: 4,
-      title: "Fashion Cave Ecommerce Application",
-      description:
-        "Real-time chat application with features like group chat and file sharing.",
-      images: ["/data/chat-1.jpg", "/data/chat-2.jpg"],
-      technologies: ["React", "Socket.io", "Express"],
-      status: "in-development",
-      githubLink: "https://github.com/ussman007/chat-app",
-    },
+    // {
+    //   id: 4,
+    //   title: "Fashion Cave Ecommerce Application",
+    //   description:
+    //     "Real-time chat application with features like group chat and file sharing.",
+    //   images: ["/data/chat-1.jpg", "/data/chat-2.jpg"],
+    //   technologies: ["React", "Socket.io", "Express"],
+    //   status: "in-development",
+    //   githubLink: "https://github.com/ussman007/chat-app",
+    // },
   ];
 
   // State to track current image for each project
