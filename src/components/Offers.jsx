@@ -6,6 +6,7 @@ import {
   FaServer,
   FaPalette,
   FaTools,
+  FaShopify,
 } from "react-icons/fa";
 
 function Offers() {
@@ -44,6 +45,19 @@ function Offers() {
     },
     {
       id: 5,
+      title: "Shopify Store Development & Customization",
+      icon: <FaShopify className="text-4xl text-purple-400" />,
+      description:
+        "Custom Shopify stores with sleek design & smooth functionality to boost sales.",
+      technologies: [
+        "Shopify Theme Editor",
+        "Shopify Liquid",
+        "HTML, CSS, JavaScript",
+        "Payment & Chat Integrations",
+      ],
+    },
+    {
+      id: 6,
       title: "API Integration",
       icon: <FaTools className="text-4xl text-purple-400" />,
       description:

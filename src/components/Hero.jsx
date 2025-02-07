@@ -11,7 +11,7 @@ function Hero() {
               Muhammad Usman
             </span>
           </h1>
-          <p className="mt-4 text-gray-400 text-lg md:text-xl max-w-[60%] break-words">
+          <p className="mt-4 text-gray-400 text-lg md:text-xl max-w-[80%] break-words">
             Full stack Developer | Your vision my code!
           </p>
 

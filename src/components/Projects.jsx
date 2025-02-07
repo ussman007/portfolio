@@ -43,6 +43,25 @@ function Projects() {
       status: "completed",
       githubLink: "https://github.com/ussman007/chat-app",
     },
+    {
+      id: 5,
+      title: "Awais Fabrics – Elegant Women's Unstitched Clothing Store",
+      description:
+        "Awais Fabrics is a luxury yet budget-friendly online store specializing in women's unstitched clothing. The store is designed on Shopify with a modern, elegant, and user-friendly interface, ensuring seamless shopping experiences.",
+      images: ["/data/AF-1.PNG", "/data/AF-2.PNG"],
+      technologies: [
+        "Shopify Theme Editor",
+        "Whats-app in app feature",
+        "Liquid",
+        "HTML",
+        "CSS",
+        "Page Speed Optimization",
+        
+      ],
+      status: "completed",
+      githubLink: "https://be2e8e-81.myshopify.com/",
+      demoVideo:"https://be2e8e-81.myshopify.com/"
+    },
     // {
     //   id: 4,
     //   title: "Fashion Cave Ecommerce Application",

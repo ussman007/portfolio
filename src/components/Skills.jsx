@@ -19,11 +19,18 @@ function Skills() {
     },
     {
       category: "Tools",
-      items: ["Git", "Docker", "AWS", "Firebase"],
+      items: ["Git", "Docker", "Shopify", "AWS", "Firebase"],
     },
     {
       category: "Your Design",
-      items: ["Figma", "Adobe XD", "Photoshop", "UI/UX"],
+      items: [
+        "Figma",
+        "Adobe XD",
+        "Photoshop",
+        "Shopify Theme Editor",
+        "UI/UX",
+        "Liquid",
+      ],
     },
   ];
 
