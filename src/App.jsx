@@ -54,9 +54,9 @@ function App() {
         <Element name="skills">
           <Skills />
         </Element>
-        <Element name="contact">
+        {/* <Element name="contact">
           <Contact />
-        </Element>
+        </Element> */}
       </div>
       <Footer />
     </div>

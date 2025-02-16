@@ -11,7 +11,7 @@ function Footer() {
     <footer className="py-8 px-4 border-t border-purple-500/20">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         <div className="flex space-x-6 mb-4">
-          {socialLinks.map((social) => (
+          {/* {socialLinks.map((social) => (
             <a
               key={social.name}
               href={social.url}
@@ -21,7 +21,7 @@ function Footer() {
             >
               {social.name}
             </a>
-          ))}
+          ))} */}
         </div>
         <p className="text-gray-500 text-sm">
           © {new Date().getFullYear()} ucoderr. All rights reserved.
