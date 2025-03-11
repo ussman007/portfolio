@@ -56,22 +56,37 @@ function Projects() {
         "HTML",
         "CSS",
         "Page Speed Optimization",
-        
       ],
       status: "completed",
       githubLink: "https://be2e8e-81.myshopify.com/",
-      demoVideo:"https://be2e8e-81.myshopify.com/"
+      demoVideo: "https://be2e8e-81.myshopify.com/",
     },
-    // {
-    //   id: 4,
-    //   title: "Fashion Cave Ecommerce Application",
-    //   description:
-    //     "Real-time chat application with features like group chat and file sharing.",
-    //   images: ["/data/chat-1.jpg", "/data/chat-2.jpg"],
-    //   technologies: ["React", "Socket.io", "Express"],
-    //   status: "in-development",
-    //   githubLink: "https://github.com/ussman007/chat-app",
-    // },
+    {
+      id: 6,
+      title: "Bulk-Bridge A Admin-Brand-Retailer Management System",
+      description:
+        "A powerful system with role-based access, secure authentication, real-time data handling, space management, order tracking, and finance management for admins, brands, and retailers. 🚀",
+      images: [
+        "/data/w4.PNG",
+        "/data/w1.PNG",
+        "/data/w2.PNG",
+        "/data/w3.PNG",
+        "/data/w5.PNG",
+        "/data/w6.PNG",
+        "/data/w7.PNG",
+      ],
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "Firebase-Firestore",
+        "Firebase-Authentication",
+        "Firebase-CloudFunctions)",
+        "Firebase Realtime Database",
+        "Material UI",
+      ],
+      status: "4/5 Phases completed",
+      demoVideo: "https://bulkkbridge.vercel.app/login",
+    },
   ];
 
   // State to track current image for each project
@@ -131,6 +146,7 @@ function Projects() {
       completed: "bg-green-500/20 text-green-300",
       "in-progress": "bg-yellow-500/20 text-yellow-300",
       "in-development": "bg-blue-500/20 text-blue-300",
+      "4/5 Phases completed": "bg-red-500/20 text-green-300",
     };
     return badges[status] || "bg-purple-500/20 text-purple-300";
   };
